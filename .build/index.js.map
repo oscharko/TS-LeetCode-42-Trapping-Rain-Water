@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "sources": [],
-  "sourcesContent": [],
-  "mappings": "",
+  "sources": ["../index.ts"],
+  "sourcesContent": ["let heights = [0, 1, 0, 2, 1, 0, 3, 1, 0, 1, 2];\n\nconst getTrappingRainWater = function (array: number[]): number {\n  let totalWater: number = 0;\n  for (let p: number = 0; p < array.length; p++) {\n    let leftP: number = p,\n      rightP: number = p,\n      maxLeft: number = 0,\n      maxRight: number = 0;\n    while (leftP >= 0) {\n      maxLeft = Math.max(maxLeft, array[leftP]);\n      leftP--;\n    }\n    while (rightP < array.length) {\n      maxRight = Math.max(maxRight, array[rightP]);\n      rightP++;\n    }\n    const currentWater: number = Math.min(maxLeft, maxRight) - array[p];\n    if (currentWater >= 0) {\n      totalWater += currentWater;\n    }\n  }\n  return totalWater;\n};\n\nconsole.log(getTrappingRainWater(heights));"],
+  "mappings": "AAAA,IAAI,UAAU,CAAC,GAAG,GAAG,GAAG,GAAG,GAAG,GAAG,GAAG,GAAG,GAAG,GAAG;AAE7C,MAAM,uBAAuB,SAAU,OAAyB;AAC9D,MAAI,aAAqB;AACzB,WAAS,IAAY,GAAG,IAAI,MAAM,QAAQ,KAAK;AAC7C,QAAI,QAAgB,GAClB,SAAiB,GACjB,UAAkB,GAClB,WAAmB;AACrB,WAAO,SAAS,GAAG;AACjB,gBAAU,KAAK,IAAI,SAAS,MAAM;AAClC;AAAA;AAEF,WAAO,SAAS,MAAM,QAAQ;AAC5B,iBAAW,KAAK,IAAI,UAAU,MAAM;AACpC;AAAA;AAEF,UAAM,eAAuB,KAAK,IAAI,SAAS,YAAY,MAAM;AACjE,QAAI,gBAAgB,GAAG;AACrB,oBAAc;AAAA;AAAA;AAGlB,SAAO;AAAA;AAGT,QAAQ,IAAI,qBAAqB;",
   "names": []
 }
