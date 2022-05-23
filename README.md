@@ -20,7 +20,10 @@ Given n non-negative integers representing an elevation map where the width of e
 
 [LeetCode](https://leetcode.com/submissions/detail/705424627/)
 
-## final Solution optimise Time and Space Complexity (Two Pointer Technique)
+## second Solution optimise Time and Space Complexity (Two Pointer Technique)
 [LeetCode](https://leetcode.com/submissions/detail/705457621/)
+
+## final Solution
+[LeetCode](https://leetcode.com/submissions/detail/705547529/)
 
 [![Run on Repl.it](https://repl.it/badge/github/oscharko/TS-LeetCode-42-Trapping-Rain-Water)](https://replit.com/@oscharko/TS-LeetCode-42-Trapping-Rain-Water)

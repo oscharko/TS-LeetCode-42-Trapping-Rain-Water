@@ -43,25 +43,51 @@ let heights = [0,1,0,2,1,0,1,3,2,1,2,1];
 //   return tW;
 // };
 
-const getTrappingRainWater = function (a: number[]): number {
-  let v: number[] = [0, (a.length - 1), 0, 0, 0]
+// const getTrappingRainWater = function (a: number[]): number {
+//   let v: number[] = [0, (a.length - 1), 0, 0, 0]
+//   while (v[0] < v[1]) {
+//     if (a[v[0]] <= a[v[1]]) {
+//       if (a[v[0]] >= v[2]) {
+//         v[2] = a[v[0]]
+//       } else {
+//         v[4] += v[2] - a[v[0]]
+//       }
+//       v[0]++
+//     } else {
+//       if (a[v[1]] >= v[3]) {
+//         v[3] = a[v[1]]
+//       } else {
+//         v[4] += v[3] - a[v[1]]
+//       }
+//       v[1]--
+//     }
+//   }
+//   return v[4];
+// };
+
+// const getTrappingRainWater = function (a: number[]): number {
+//   let totalWater: number = 0;
+//   for (
+//     let v: number[] = [0, a.length - 1, 0];
+//     v[0] < v[1];
+//     a[v[0]] <= a[v[1]] ? v[0]++ : v[1]--
+//   ) {
+//     v[2] = Math.max(v[2], Math.min(a[v[0]], a[v[1]]));
+//     totalWater += v[2] - Math.min(a[v[0]], a[v[1]]);
+//   }
+
+//   return totalWater;
+// };
+
+const getTrappingRainWater = function (a: number[]): number{
+  let v: number[]= [0, a.length - 1, 0, 0, 0];
   while (v[0] < v[1]) {
-    if (a[v[0]] <= a[v[1]]) {
-      if (a[v[0]] >= v[2]) {
-        v[2] = a[v[0]]
-      } else {
-        v[4] += v[2] - a[v[0]]
-      }
-      v[0]++
-    } else {
-      if (a[v[1]] >= v[3]) {
-        v[3] = a[v[1]]
-      } else {
-        v[4] += v[3] - a[v[1]]
-      }
-      v[1]--
-    }
+    v[3] = Math.min(a[v[0]], a[v[1]]);
+    v[2] = Math.max(v[2], v[3]);
+    v[4] += v[2] - v[3];
+    a[v[0]] <= a[v[1]] ? v[0]++ : v[1]--;
   }
+
   return v[4];
 };
 
