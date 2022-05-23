@@ -20,4 +20,4 @@ Given n non-negative integers representing an elevation map where the width of e
 
 [LeetCode](https://leetcode.com/submissions/detail/705424627/)
 
-[![Run on Repl.it](https://repl.it/badge/github/oscharko/LeetCode-11-Container-With-Most-Water)](https://replit.com/@oscharko/LeetCode-11-Container-With-Most-Water)
+[![Run on Repl.it](https://repl.it/badge/github/oscharko/TS-LeetCode-42-Trapping-Rain-Water)](https://replit.com/@oscharko/TS-LeetCode-42-Trapping-Rain-Water)
